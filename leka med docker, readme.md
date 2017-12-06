@@ -37,17 +37,19 @@ Docker imagen för Alpine ligger på ca 5mb medans traditionella bas imagar för
 
 **Fråga:** Hur bygga och testa Docker images när Jenkins redan exekverar i en Docker container?
 
-![ci-jenkins-dind](images/ci-jenkins-dind.jpg)
+![ci-jenkins-dind](images/ci-jenkins-dind.jpg)  
+**Source:** Slide #13 in the following presentation: [https://www.slideshare.net/Docker/build-publish-deploy-and-test-docker-images-and-containers-with-jenkins-workflow](https://www.slideshare.net/Docker/build-publish-deploy-and-test-docker-images-and-containers-with-jenkins-workflow)
 
 **Ide:** Låt en Docker container uppträda som en Docker Host (pss som en VM...), dvs exekvera Docker i containern. Då kan en container använda Docker tooling och CLI helt transparent.
 
-**Mitt favorit Use case:** Hur testa en container orkestrerare, t ex Docker Swarm eller Kubernetes, lokalt (på en minnesbegränsad Mac...)?
+**Mitt favorit Use case:** Hur testa en container orkestrerare, t ex Docker Swarm eller Kubernetes, lokalt (på en minnesbegränsad MacBook Pro...)?
 
-![docker-swarm](images/docker-swarm.png)
+![docker-swarm](images/docker-swarm.png)   
+**Source:** [http://info.crunchydata.com/blog/easy-postgresql-cluster-recipe-using-docker-1.12](http://info.crunchydata.com/blog/easy-postgresql-cluster-recipe-using-docker-1.12)
 
-En Master och tre Workers i VirtualBox med minimal minnestilldening, 2GB, per VM tar 8GB, inget bra...
+En Master och tre Workers i VirtualBox med minimal minnestilldening, 2GB, per VM tar 8GB på tomgång, inget bra...
 
-Vad händer om man låter Docker for Mac vara Master node och som exekverar Worker noderna som containerar mha Docker in Docker?
+Vad händer om man låter "Docker for Mac" vara Master node och som exekverar Worker noderna som containerar mha Docker in Docker?
 
 ## Setup
 
@@ -261,6 +263,8 @@ Kan därmed övervarkas av t ex IPAM mjukvara (IP address management).
 **Constraints:** No issue with only `Maven/Gradle + Java`, but when adding `JavaScript`, `Node`, `MS .Net`, `Go`, `Swift` et al its getting more and more complex and error prune to keep all dev envs and CI's in sync... 
 
 **Idea:** Can't we use containers to run our tools in the same way as they already run our applications?
+
+**Source code** (excluding Dockerfiles for attempt #3 and #4): [git@github.com:arun-gupta/docker-java-multistage.git](git@github.com:arun-gupta/docker-java-multistage.git)
 
 **Attempt 1:** Build artifacts in one **big** Docker image including dev tools and runtim:
 
