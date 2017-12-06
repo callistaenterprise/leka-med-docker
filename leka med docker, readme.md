@@ -264,7 +264,7 @@ Kan därmed övervarkas av t ex IPAM mjukvara (IP address management).
 
 **Idea:** Can't we use containers to run our tools in the same way as they already run our applications?
 
-**Source code** (excluding Dockerfiles for attempt #3 and #4): [git@github.com:arun-gupta/docker-java-multistage.git](git@github.com:arun-gupta/docker-java-multistage.git)
+**Source code** (excluding Dockerfiles for attempt #3 and #4): [https://github.com/arun-gupta/docker-java-multistage](https://github.com/arun-gupta/docker-java-multistage)
 
 **Attempt 1:** Build artifacts in one **big** Docker image including dev tools and runtim:
 
