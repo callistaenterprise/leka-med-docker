@@ -95,7 +95,7 @@ I ett annat fönster:
 	docker node ls
 	docker service ls
 
-Open Vizualiser: [localhost:8000](localhost:8000)
+Open Vizualiser: [localhost:8000](http://localhost:8000)
 
 ## Deploy and scale
 
@@ -205,7 +205,7 @@ Switchen `-p` måste användas för att forwarda portar från hosten in till con
 
 > "***Docker for Mac***" forwardar porten hela vägen från MAc'en och inte bara från Docker Host'en
 
-![Bridge Network](images/bridge network.png)
+![Bridge Network](images/bridge-network.png)
 
 Will work:
 
@@ -220,10 +220,10 @@ Will work:
 
 ## Overlay
 
-![Overlay Network](images/overlay network, 1.png)
-![Overlay Network](images/overlay network, 2.png)
-![Overlay Network](images/overlay network, 3.png)
-![Overlay Network](images/overlay network, 4.png)
+![Overlay Network](images/overlay-network,1.png)
+![Overlay Network](images/overlay-network,2.png)
+![Overlay Network](images/overlay-network,3.png)
+![Overlay Network](images/overlay-network,4.png)
 
 Demo:
 
@@ -250,8 +250,8 @@ Demo:
 Ger varje container  en MAC Address så att det kan anslutas direkt till ett fysiskt nätverk, som en "first class citizen".
 Kan därmed övervarkas av t ex IPAM mjukvara (IP address management).
 
-![Macvlan Network](images/macvlan network, 1.png)
-![Macvlan Network](images/macvlan network, 2.png)
+![Macvlan Network](images/macvlan-network,1.png)
+![Macvlan Network](images/macvlan-network,2.png)
 
 
 # MultiStage builds
