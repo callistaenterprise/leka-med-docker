@@ -417,12 +417,19 @@ With Nexus running:
 	docker container run -it --rm -p 8080:8080 --name wildfly people:multistage
 	curl http://localhost:8080/people/resources/persons
 	
+Edit source code:
+
+	vi src/main/java/org/examples/java/MyApplication.java
+		
+Edit pom.xml:
+
+	vi pom.xml
 	
 # Multi-architecture Docker images
 
-![Overview](images/multiarch summary.jpg)
+![Overview](images/multiarch-summary.jpg)
 
-![Overview](images/multiarch ci.jpg)
+![Overview](images/multiarch-ci.jpg)
 
 To build docker images that support multiple architectures use the upcoming `docker manifest` command. Until `docker manifest` gets GA, use [https://github.com/estesp/manifest-tool](https://github.com/estesp/manifest-tool)...
 
