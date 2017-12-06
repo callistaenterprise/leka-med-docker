@@ -266,7 +266,7 @@ Kan därmed övervarkas av t ex IPAM mjukvara (IP address management).
 
 **Source code** (excluding Dockerfiles for attempt #3 and #4): [https://github.com/arun-gupta/docker-java-multistage](https://github.com/arun-gupta/docker-java-multistage)
 
-**Attempt 1:** Build artifacts in one **big** Docker image including dev tools and runtim:
+**Attempt 1:** Build artifacts in one **big** Docker image including dev tools and runtime:
 
 	FROM maven:3.5-jdk-8
 	
@@ -340,7 +340,15 @@ Dockerfile:
 	FROM jboss/wildfly:10.1.0.Final
 	COPY --from=BUILD /usr/src/myapp/target/people-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/people.wardocker-java-multis
 
-> ...works fine with **one minor catch**, if one dependency is changed the Docker image cache gets invalidated and the whole repo is downlaoded again...
+> ...works fine with **two minor catches**:
+> 
+> 1. if one dependency is changed the Docker image cache gets invalidated and the whole repo is downlaoded again...
+> 2. each Docker image we build will have its own Maven cache...
+
+
+**Attempt 5:** Can we use the Docker volume that the Maven Docker image defiens to cache the Maven dependencies?
+
+**UNDER INVESTIGATION...**
 
 ## Details on local Nexus in Docker
 
@@ -403,13 +411,6 @@ Add to projects `pom.xml`:
 	    </repository>
 	  </repositories>
 	  
-## Local build
-
-With Nexus running:
-
-	$ time mvn compile
-	real	0m8.373s
-
 
 ## Build and run
 
