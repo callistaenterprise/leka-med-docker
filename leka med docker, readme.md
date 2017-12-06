@@ -122,7 +122,7 @@ Verify:
 	# }
 
 	# Loop...
-	while true; do o="$(curl localhost:8080/api/quote -s -w "\n" | jq -r .ipAddress)"; clear; echo "$o"; sleep 1; done
+	while true; do curl localhost:8080/api/quote -s -w "\n" | jq -r .ipAddress; sleep 1; done
 
 ## ??? Setup DOCKER - env vars ???
 
