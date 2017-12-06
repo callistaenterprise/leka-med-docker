@@ -201,7 +201,7 @@ Login to host and try out access to nginx-1
 ## Bridge network
 
 The ***default*** network. Isolerat single host only nätverk.   
-Alla containrar anslutna till nwätverket kan prata med varandra men ingen utanför kan nå in i nätverket. 
+Alla containrar anslutna till nätverket kan prata med varandra men ingen utanför kan nå in i nätverket. 
 
 Switchen `-p` måste användas för att forwarda portar från hosten in till containrar i nätverket...
 
@@ -231,7 +231,7 @@ Demo:
 
 1. Create a overlay network
 
-		docker network create -d overlay my-network
+		docker network create -d overlay my-network --attachable
 
 1. Jump into one of the nodes, `worker-1`, and start a nginx container and connect it to the overlay networ
 
