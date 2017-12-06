@@ -169,7 +169,7 @@ Hur gör man samma för DIND Docker engines???
 
 [DockerCon EU 2017 presentation - Deeper Dive in Docker Overlay Networks](https://dockercon.docker.com/watch/XkRRA7Etsznv7uAk1UKsri)
 
-[//]: # (För egen del gick jag på många föredrag som handlade om hur man sätter upp olika typer av mjukvarudefinierade nätverk [SDN](https://en.wikipedia.org/wiki/Software-defined_networking) i Docker.)
+[//]: # (För egen del gick jag på många föredrag som handlade om hur man sätter upp olika typer av mjukvarudefinierade nätverk SDN - https://en.wikipedia.org/wiki/Software-defined_networking i Docker.)
 
 Docker har en plugin modell för olika typer av nätverk enligt principen [*batteries included but removable*](https://twitter.com/solomonstre/status/530537767122784256). Dels finns det ett antal inbygda nätverkstyper *Null, Host, Bridge, Overlay* och *Macvlan* men också ett antal tredje parts alternativ så som [Weave](https://www.weave.works/docs/net/latest/overview/) och [Calio](https://www.projectcalico.org). 
 
