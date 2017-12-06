@@ -95,7 +95,7 @@ I ett annat fönster:
 	docker node ls
 	docker service ls
 
-Open Vizualiser: [localhost:8000]()
+Open Vizualiser: [localhost:8000](localhost:8000)
 
 ## Deploy and scale
 
@@ -355,9 +355,9 @@ From a container:
 
 	docker run -it --rm centos curl -u admin:admin123 http://Magnuss-MBP.lan:8081/service/metrics/ping	# pong
 
-Web: [http://localhost:8081]() (admin/admin123)
+Web: [http://localhost:8081](http://localhost:8081) (admin/admin123)
 
-Maven-central proxy URL: [http://localhost:8081/repository/maven-central/]()
+Maven-central proxy URL: [http://localhost:8081/repository/maven-central/](http://localhost:8081/repository/maven-central/)
 
 `~/.m2/settings.xml`:
 	
@@ -420,7 +420,7 @@ With Nexus running:
 
 ![Overview](images/multiarch ci.jpg)
 
-To build docker images that support multiple architectures use the upcoming `docker manifest` command. Until `docker manifest` gets GA, use [https://github.com/estesp/manifest-tool]()...
+To build docker images that support multiple architectures use the upcoming `docker manifest` command. Until `docker manifest` gets GA, use [https://github.com/estesp/manifest-tool](https://github.com/estesp/manifest-tool)...
 
 	$ docker run mplatform/mquery golang
 	Image: golang
@@ -479,7 +479,7 @@ Starta Docker container på Windows:
 
 
 > **NOTE:** Access via `localhost` fungerar inte, t ex `curl http://localhost:8080/api/quote`.  
-> Se: [https://blog.sixeyed.com/published-ports-on-windows-containers-dont-do-loopback/]()
+> Se: [https://blog.sixeyed.com/published-ports-on-windows-containers-dont-do-loopback/](https://blog.sixeyed.com/published-ports-on-windows-containers-dont-do-loopback/)
 >
 > Måste gå via *hostens externa IP adress* eller *containerns egna IP adress*!
 >
@@ -507,7 +507,7 @@ Starta Docker container på Windows:
 
 
 > **NOTE:** Hur få tag på containerns interna IP adress på Windows???   
-> Följande fungerar inte [https://forums.docker.com/t/cant-get-ip-of-windows-container-networksettings-missing/28772]()
+> Följande fungerar inte [https://forums.docker.com/t/cant-get-ip-of-windows-container-networksettings-missing/28772](https://forums.docker.com/t/cant-get-ip-of-windows-container-networksettings-missing/28772)
 >
 > **Workaround:** Min tjänst skriver ut containerns IP adress, använd den för nu!
 
