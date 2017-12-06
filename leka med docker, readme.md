@@ -428,6 +428,8 @@ Edit pom.xml:
 	
 # Multi-architecture Docker images
 
+[DockerCon EU 2017 presentation - Docker Multi-arch All the Things](https://dockercon.docker.com/watch/Q2LpoYRL3drmxzWc8yDmn9)
+
 ![Overview](images/multiarch-summary.jpg)
 
 ![Overview](images/multiarch-ci.jpg)
